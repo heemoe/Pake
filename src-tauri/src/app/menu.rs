@@ -7,7 +7,7 @@ use tauri::{Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, WindowBuilder,
 
 #[cfg(any(target_os = "linux", target_os = "windows"))]
 use tauri_plugin_window_state::{AppHandleExt, StateFlags};
-
+ 
 pub fn get_menu() -> Menu {
     let close = CustomMenuItem::new("close".to_string(), "Close Window").accelerator("CmdOrCtrl+W");
     let goto_url_item = CustomMenuItem::new("goto_url".to_string(), "Go to URL...")
